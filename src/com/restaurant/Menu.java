@@ -1,15 +1,17 @@
 package com.restaurant;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Menu {
-    private ArrayList<MenuItem> menuItems =  new ArrayList<>();
-    private Date lastEntry;
+    private ArrayList<MenuItem> menuItems;
+    private Date lastEntry; //Date util
 
+    //Ctor
     public Menu(ArrayList<MenuItem> menuItems, Date lastEntry) {
         this.menuItems = menuItems;
-        this.lastEntry = lastEntry;
+        this.lastEntry = Date.from(Instant.now());
     }
 
     public ArrayList<MenuItem> getMenuItems() {
