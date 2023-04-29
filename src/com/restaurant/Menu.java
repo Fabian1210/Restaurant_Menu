@@ -9,11 +9,12 @@ public class Menu {
     private Date lastEntry; //Date util
 
     //Ctor
-    public Menu(ArrayList<MenuItem> menuItems) {
+    public Menu(ArrayList<MenuItem> menuItems) { //takes in list of menuItems
         this.menuItems = menuItems;
         this.lastEntry = Date.from(Instant.now());
     }
 
+    //Getters/Setters
     public ArrayList<MenuItem> getMenuItems() {
         return menuItems;
     }

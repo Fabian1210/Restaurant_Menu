@@ -7,6 +7,7 @@ public class MenuItem {
     private String category;
     private boolean isNewItem;
 
+    //Ctor
     public MenuItem(double price, String description, String category) {
         this.description = description;
         this.price = price;
@@ -14,6 +15,7 @@ public class MenuItem {
         this.isNewItem = true;
     }
 
+    //Getters/Setters
     public String getDescription() {
         return description;
     }
@@ -46,5 +48,23 @@ public class MenuItem {
         isNewItem = newItem;
     }
 
+    /*toString() Overrides java default toString method.
+    Returns object value in string format (meaningful output)
+    */
+    @Override
+    public String toString() {
+        return description + '\n' +
+                "Price: " + price + '\n' +
+                "Category: " + category + '\n' +
+                "new item? " + isNewItem + '\n';
 
+        //--another way to implement--
+//                return
+//                String.format(description + '\n'+
+//                        "price: " +
+//                        price + '\n' +
+//                        "category: " +
+//                        category + '\n' +
+//                        "new item: " + isNew);
+    }
 }
