@@ -9,7 +9,7 @@ public class Menu {
     private Date lastEntry; //Date util
 
     //Ctor
-    public Menu(ArrayList<MenuItem> menuItems, Date lastEntry) {
+    public Menu(ArrayList<MenuItem> menuItems) {
         this.menuItems = menuItems;
         this.lastEntry = Date.from(Instant.now());
     }
